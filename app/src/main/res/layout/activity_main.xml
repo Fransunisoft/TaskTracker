@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Task Tracker"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/five"
+
+                        />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <include
+                android:id="@+id/note_page"
+                layout="@layout/edit_note" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Task created"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_property_1_sort" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/taskRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:scrollbarThumbVertical="@drawable/ic_scrollbarthumb"
+                android:scrollbars="vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="7dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line_background" />
+
+                <View
+                    android:id="@+id/line10"
+                    android:layout_width="9dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line_greenbackground" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="7dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/line1"
+                    android:background="@drawable/line_background" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="44dp"
+                    android:layout_toEndOf="@id/line1"
+                    android:background="@drawable/line_background2" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="7dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/line2"
+                    android:background="@drawable/line_background" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="47dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="44dp"
+                    android:layout_toEndOf="@id/line2"
+                    android:background="@drawable/line_background3" />
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="7dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/line3"
+                    android:background="@drawable/line_background" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="44dp"
+                    android:layout_toEndOf="@id/line3"
+                    android:background="@drawable/line_background4" />
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_width="7dp"
+                    android:layout_height="82dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/line4"
+                    android:background="@drawable/line_background" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="44dp"
+                    android:layout_toEndOf="@id/line4"
+                    android:background="@drawable/line_background5" />
+
+                <View
+                    android:id="@+id/line60"
+                    android:layout_width="38dp"
+                    android:layout_height="92dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/line5"
+                    android:background="@drawable/line_plain" />
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_width="7dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/line5"
+                    android:background="@drawable/line_background" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="44dp"
+                    android:layout_toEndOf="@id/line5"
+                    android:background="@drawable/line_background6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="100dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Task 1"
+                    android:textColor="@color/black"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/tv1"
+                    android:text="Task 2"
+                    android:textColor="@color/black"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/tv2"
+                    android:text="Task 3"
+                    android:textColor="@color/black"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/tv3"
+                    android:text="Task 4"
+                    android:textColor="@color/black"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/tv4"
+                    android:text="Task 5"
+                    android:textColor="@color/black"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/tv5"
+                    android:text="Task 6"
+                    android:textColor="#52BB69"
+                    android:textSize="8sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/actionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_add"
+        android:tintMode="@android:color/white"
+        app:backgroundTint="@color/primary"
+        app:layout_anchor="@id/bottomAppBar" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:contentInsetStart="0dp"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="50dp"
+        app:labelVisibilityMode="labeled">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/main_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
